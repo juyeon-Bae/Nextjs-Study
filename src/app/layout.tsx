@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     template: "%s | Next Movies",
     default: "Next Movies" //meta data없을때 ex) not-found pate(기본값)
   },
-  description: "The best movies on the best fromework",
+  description: "The best movies on the best framework",
 };
 
 export default function RootLayout({
