@@ -1,12 +1,21 @@
+"use client"
+import { useEffect, useState } from "react";
 
-export const metadata = { //home페이지에서만 보여주기
-  title: "Home",
-  description: "The best movies on the best framework",
-};
+
 export default function Page() {
+  const [movies, setMovies] = useState();
+  const getMovies = async () => {
+    const response = await fetch("https://nomad-movies.nomadcoders.workers.dev/movies")
+    const json = await response.json()
+    setMovies(json);
+  }
+  useEffect(() => {
+    getMovies();
+  }, [])
+
   return (
     <div>
-      <h1>hello</h1>
+      {JSON.stringify(movies)}
     </div>
   )
 }
