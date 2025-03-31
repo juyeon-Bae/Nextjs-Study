@@ -17,7 +17,7 @@ async function getMovie(id: string) {
 }
 
 
-export default async function MovieInfo(id: string) {
+export default async function MovieInfo({ id }: { id: string }) {
     const movie = await getMovie(id);
     return (
         <div>
