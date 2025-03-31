@@ -1,0 +1,9 @@
+.nav {
+    background-color: rgb(206, 159, 159);
+    padding: 50px 100px;
+}
+
+.list {
+    display: flex;
+    gap: 10px;
+}
